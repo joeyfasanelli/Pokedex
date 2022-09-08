@@ -22,18 +22,17 @@
 		<br />
 		Type: <%=data.type%>
         <br />
-        HP: <%=data.hp%>
-        ATTACK: <%=data.attack%>
-        DEFENSE: <%=data.defense%>
+        HP: <%=data.stats.hp%>
+        </br>
+        ATTACK: <%=data.stats.attack%>
+        </br>
+        DEFENSE: <%=data.stats.defense%>
 
         <br><br />
         <img src= <%=data.img%>>
-        <br />
-        
-        <a class="pokedexlink" href="/pokedex/<%=data.id%>/edit">Edit</a>
         
         <br></br>
-        <form style="display:inline;" action="/pokedex/<%= data.id %>?_method=DELETE" method="POST">
+        <form style="display:inline;" action="/pokedex/<%=index%>?_method=DELETE" method="POST">
             <input class="delete" type="submit" value="DELETE" />
         </form>   
     </div>
@@ -54,7 +53,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            color: white;
+            color: rgb(0, 0, 0);
             font-family:'Montserrat', sans-serif;
         }
     
@@ -62,6 +61,8 @@
             margin: auto;
             background-image: url('https://i.imgur.com/erah9c0.jpg');
             background-size: 1250px;
+            background-attachment: fixed;
+            margin: 0;
         }
     
         .navigation {
@@ -94,7 +95,7 @@
             vertical-align: baseline;
             text-decoration: none;
             -webkit-tap-highlight-color: transparent;
-            color: white;
+            color: black;
             font-family:'Montserrat', sans-serif;
             padding: 0px 20px 0px 20px;
             
@@ -102,6 +103,29 @@
     
         .pokedexlink:hover {
             color: #000000;
+        }
+
+        .delete {
+            width: 130px;
+            height: 40px;
+            border-color:  rgb(184, 46, 46);
+            border-width: medium;
+            border-style: solid;
+            border-radius: 50px;
+            background-color:  rgb(184, 46, 46);
+            color: white;
+            margin: 20px 0px 0px 0px;
+        }
+
+        .delete:hover {
+            background-color: #ce3232;
+            cursor: pointer;
+        }
+
+        .delete:active {
+            background-color: #ce3232;
+            transform: translateY(2px);
+
         }
     
     

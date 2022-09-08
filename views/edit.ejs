@@ -15,17 +15,20 @@
         </li>
 
     </ul>
+    
 		<h1>Edit Pokemon</h1>
+        <div class="form">
 		<form action="/pokedex/<%=index%>?_method=PUT" method="POST">
 			Id: <input type="text" name="id" value="<%=pokemon.id%>" /><br />
 			Name: <input type="text" name="name" value="<%=pokemon.name%>" /><br />
 			Type: <input type="text" name="type" value="<%=pokemon.type%>" /><br />
             Img: <input type="text" name="img" value="<%=pokemon.img%>"/><br />
-            HP: <input type="text" name="hp" value="<%=pokemon.hp%>" /><br />
-            ATTACK: <input type="text" name="attack" value="<%=pokemon.attack%>" /><br />
-            DEFENSE: <input type="text" name="defense" value="<%=pokemon.defense%>" /><br />
+            HP: <input type="text" name="hp" value="<%=pokemon.stats.hp%>" /><br />
+            ATTACK: <input type="text" name="attack" value="<%=pokemon.stats.attack%>" /><br />
+            DEFENSE: <input type="text" name="defense" value="<%=pokemon.stats.defense%>" /><br />
 			<input class="edit" type="submit" name="" value="Submit Changes"  />
 		</form>
+        </div>
     
 	</body>
 </html>
@@ -51,6 +54,8 @@
             margin: auto;
             background-image: url('https://i.imgur.com/erah9c0.jpg');
             background-size: 1250px;
+            background-attachment: fixed;
+            margin: 0;
         }
     
         .navigation {
@@ -91,6 +96,38 @@
     
         .pokedexlink:hover {
             color: #000000;
+        }
+
+        .form {
+            color: rgb(0, 0, 0);
+            font-family:'Montserrat', sans-serif;
+            left: 45%;
+            right: 50%;
+            position: absolute;
+
+        }
+
+        .edit {
+            width: 130px;
+            height: 40px;
+            border-color:  rgb(184, 46, 46);
+            border-width: medium;
+            border-style: solid;
+            border-radius: 50px;
+            background-color:  rgb(184, 46, 46);
+            color: white;
+            margin: 20px 0px 0px 0px;
+        }
+
+        .edit:hover {
+            background-color: #ce3232;
+            cursor: pointer;
+        }
+
+        .edit:active {
+            background-color: #ce3232;
+            transform: translateY(2px);
+
         }
     
     

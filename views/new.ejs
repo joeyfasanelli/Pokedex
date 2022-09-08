@@ -7,8 +7,16 @@
     <title>Pokedex</title>
 </head>
 <body>
+    <h1> Pokedex </h1>
+    <ul class="navigation">
+        <li class="navbar">
+            <a class="pokedexlink" href="/pokedex/">Pokemon</a>
+            <a class="pokedexlink" href="/pokedex/new">Add New Pokemon</a>
+        </li>
+    </ul>
         <h1>Add New Pokemon:</h1>
         
+        <div class="form">
         <form action="/pokedex" method="POST">
             Id: <input type="text" placeholder="Id" name="id"></br>
             Name: <input type="text" placeholder="Name" name="name"></br>
@@ -18,12 +26,10 @@
             HP: <input type="text" placeholder="HP" name="hp"></br>
             ATTACK: <input type="text" placeholder="ATTACK" name="attack"></br>
             DEFENSE: <input type="text" placeholder="DEFENSE" name="defense"></br>
-           
-            <input type="submit" value="Add to Pokedex">
+        </br>
+            <input class="add" type="submit" value="Add to Pokedex">
         </form>
-        <button>
-            <a href="/pokedex">Back</a>
-        </button>
+        </div>
         
 </body>
 </html>
@@ -33,22 +39,14 @@
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@200&family=Open+Sans:wght@300&family=Pathway+Gothic+One&display=swap');
     
     
-        .products {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0px 20px 30px 20px;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: white;
-            font-family:'Montserrat', sans-serif;
-        }
+        
     
         body {
             margin: auto;
             background-image: url('https://i.imgur.com/erah9c0.jpg');
             background-size: 1250px;
+            background-attachment: fixed;
+            margin: 0;
         }
     
         .navigation {
@@ -90,6 +88,39 @@
         .pokedexlink:hover {
             color: #000000;
         }
+
+        .form {
+            color: rgb(0, 0, 0);
+            font-family:'Montserrat', sans-serif;
+            left: 45%;
+            right: 50%;
+            position: absolute;
+
+        }
+
+        .add {
+            width: 130px;
+            height: 40px;
+            border-color:  rgb(184, 46, 46);
+            border-width: medium;
+            border-style: solid;
+            border-radius: 50px;
+            background-color:  rgb(184, 46, 46);
+            color: white;
+            margin: 20px 0px 0px 0px;
+        }
+
+        .add:hover {
+            background-color: #ce3232;
+            cursor: pointer;
+        }
+
+        .add:active {
+            background-color: #ce3232;
+            transform: translateY(2px);
+
+        }
+
     
     
     
