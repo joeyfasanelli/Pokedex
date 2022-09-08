@@ -28,12 +28,7 @@ app.delete('/pokedex/:id', (req, res) => {
 
 // UPDATE 
 app.put("/pokedex/:id", (req, res) => {
-    Pokemon[req.params.id.id] = req.body.id,
-    Pokemon[req.params.id.name] = req.body.name,
-    Pokemon[req.params.id.type] = req.body.type,
-    Pokemon[req.params.id.stats.hp] = req.body.stats.hp,
-    Pokemon[req.params.id.stats.attack] = req.body.stats.attack,
-    Pokemon[req.params.id.stats.defense] = req.body.stats.defense,
+    Pokemon[req.params.id] = req.body,
     res.redirect('/pokedex')
 });
 

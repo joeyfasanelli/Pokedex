@@ -15,7 +15,7 @@
         </li>
 
     </ul>
-    
+
 		<h1>Edit Pokemon</h1>
         <div class="form">
 		<form action="/pokedex/<%=index%>?_method=PUT" method="POST">
@@ -23,9 +23,9 @@
 			Name: <input type="text" name="name" value="<%=pokemon.name%>" /><br />
 			Type: <input type="text" name="type" value="<%=pokemon.type%>" /><br />
             Img: <input type="text" name="img" value="<%=pokemon.img%>"/><br />
-            HP: <input type="text" name="hp" value="<%=pokemon.stats.hp%>" /><br />
-            ATTACK: <input type="text" name="attack" value="<%=pokemon.stats.attack%>" /><br />
-            DEFENSE: <input type="text" name="defense" value="<%=pokemon.stats.defense%>" /><br />
+            HP: <input type="text" name="hp" value="<%=pokemon.hp%>" /><br />
+            ATTACK: <input type="text" name="attack" value="<%=pokemon.attack%>" /><br />
+            DEFENSE: <input type="text" name="defense" value="<%=pokemon.defense%>" /><br />
 			<input class="edit" type="submit" name="" value="Submit Changes"  />
 		</form>
         </div>

@@ -21,9 +21,9 @@
           <a class="pokemen" href="/pokedex/<%=i%>"><img class="pokemen" src= <%=data[i].img %>></a>
           <a class="edit" href="/pokedex/<%=i%>/edit">Edit</a>
         <% } %>
-
-  
-
+        
+        <a class="verybestlink" href="https://www.youtube.com/watch?v=rg6CiPI6h2g">I wanna be the very best...</a>
+        
 </body>
 </html>
 
@@ -98,6 +98,22 @@
         -webkit-tap-highlight-color: transparent;
         color: black;
         font-family:'Montserrat', sans-serif;
+    }
+
+    .verybestlink {
+        list-style: none;
+        vertical-align: baseline;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        color: rgb(255, 0, 0);
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        float: right;
+        padding: 40px 40px 40px 40px;
+    }
+
+
+    .verybestlink:hover {
+        color: #000000;
     }
 
 
