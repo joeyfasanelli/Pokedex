@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+</head>
+<body>
+        <h1>Add New Pokemon:</h1>
+        
+        <form action="/pokedex" method="POST">
+            Id: <input type="text" placeholder="Id" name="id"></br>
+            Name: <input type="text" placeholder="Name" name="name"></br>
+            Type: <input type="text" placeholder="Type" name="type"></br>
+            Img: <input type="text" placeholder="Image Link" name="img"></br>
+            <h3>STATS:</h3> 
+            HP: <input type="text" placeholder="HP" name="hp"></br>
+            ATTACK: <input type="text" placeholder="ATTACK" name="attack"></br>
+            DEFENSE: <input type="text" placeholder="DEFENSE" name="defense"></br>
+           
+            <input type="submit" value="Add to Pokedex">
+        </form>
+        <button>
+            <a href="/pokedex">Back</a>
+        </button>
+        
+</body>
+</html>
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@200&family=Open+Sans:wght@300&family=Pathway+Gothic+One&display=swap');
+    
+    
+        .products {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0px 20px 30px 20px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            font-family:'Montserrat', sans-serif;
+        }
+    
+        body {
+            margin: auto;
+            background-image: url('https://i.imgur.com/erah9c0.jpg');
+            background-size: 1250px;
+        }
+    
+        .navigation {
+            background-color: rgb(184, 46, 46);
+            border-bottom: 1px solid #ffffff;
+            border-top: 1px solid #ffffff;
+            text-align: center;
+            list-style: none;
+            padding: 0px;
+           
+    
+        }
+    
+        h1 {
+            color: white;
+            font-family: 'Pathway Gothic One', sans-serif;
+            padding: 0px 0px 0px 0px;
+            text-align: center;
+    
+        }
+    
+        .navbar {
+            padding: 18px;
+            
+            
+        }
+    
+        .pokedexlink {
+            list-style: none;
+            vertical-align: baseline;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            color: white;
+            font-family:'Montserrat', sans-serif;
+            padding: 0px 20px 0px 20px;
+            
+        }
+    
+        .pokedexlink:hover {
+            color: #000000;
+        }
+    
+    
+    
+    </style>

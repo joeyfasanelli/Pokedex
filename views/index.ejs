@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+</head>
+<body>
+
+    <h1> Pokedex </h1>
+    <ul class="navigation">
+        <li class="navbar">
+            <a class="pokedexlink" href="/pokedex/">Pokemon</a>
+            <a class="pokedexlink" href="/pokedex/new">Add New Pokemon</a>
+        </li>
+    </ul>
+
+    
+        <% for(let i = 0; i < data.length; i++) { %>
+          <a class="pokemen" href="/pokedex/<%=i%>"><img src= <%=data[i].img %>></a>
+        <% } %>
+
+  
+
+</body>
+</html>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@200&family=Open+Sans:wght@300&family=Pathway+Gothic+One&display=swap');
+
+
+    .pokemen {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0px 20px 30px 20px;
+    }
+
+    body {
+        
+        background-image: url('https://i.imgur.com/erah9c0.jpg');
+        background-size: 1250px;
+    }
+
+    .navigation {
+        background-color: rgb(184, 46, 46);
+        border-bottom: 1px solid #ffffff;
+        border-top: 1px solid #ffffff;
+        text-align: center;
+        list-style: none;
+        padding: 0px;
+       
+
+    }
+
+    h1 {
+        color: white;
+        font-family: 'Pathway Gothic One', sans-serif;
+        padding: 0px 0px 0px 0px;
+        text-align: center;
+
+    }
+
+    .navbar {
+        padding: 18px;
+        
+        
+    }
+
+    .pokedexlink {
+        list-style: none;
+        vertical-align: baseline;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        color: white;
+        font-family:'Montserrat', sans-serif;
+        padding: 0px 20px 0px 20px;
+        
+    }
+
+    .pokedexlink:hover {
+        color: #000000;
+    }
+
+
+
+</style>
